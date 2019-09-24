@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+        <a href="index.html">돌아가기</a>
     <head>
         <title>HTML연습</title>
     </head>
@@ -100,5 +101,57 @@
                 <td>8</td>
             </tr>
         </table>
+        <table>
+            <tr>
+                <td colspan="2">up</td>
+                <td rowspan="2">right</td>
+            </tr>
+            <tr>
+                 <td rowspan="2">left</td>
+                 <td>center</td>
+             </tr>
+             <tr>
+                 <td colspan="2">down</td>
+             </tr>
+         </table>
+         <br />
+         <br />
+         <!-- form 양식지 -->
+         <form>
+            <label for="id">아이디</label>
+            <input type="text" name="id" placeholder="아이디를 입력하세요" />
+            <input type="password" placeholder="패스워드를 입력하세요" />
+            <!-- 라디오는 name이 중요함 이름이 같은 것들 중 하나만 선택하게. 중복선택 안되게 -->
+            <input type="radio" name="bt1" checked/>
+            <input type="radio" name="bt1" />
+            <input type="radio" name="bt1" />
+            <!-- 단수선택을 목적으로 하는 입력장치-->
+            <input type="radio" name="bt2" />
+            <input type="radio" name="bt2" />
+            <input type="radio" name="bt2" />
+
+            <!-- 복수선택을 목적으로 하는 입력장치-->
+            <input type="checkbox" checked/>
+            <input type="checkbox" />
+            <input type="checkbox" />
+
+            <!-- 선택박스, 콤보박스-->
+            <!-- 선택할 수 있는 선택지를 미리 알리기 위함, 입력 실수 방지-->
+            <select>
+                <option> 사이트 선택 </option>
+                <option> www.naver.com </option>
+                <option> www.google.com </option>
+            </select>
+            
+            <!-- 여러줄의 문자를 입력할 때 사용 cols(가로 글자수), rows(세로 줄수)-->
+            <textarea cols="30" rows="5">
+
+            </textarea>
+            <input type="button" value="버튼" />
+            <input type="button" onclick="alert('테스트 버튼이 눌렸습니다.')" value="테스트 버튼" />
+
+            <input type="submit" value="제출" />
+        
+         </form>
     </body>
 </html>
