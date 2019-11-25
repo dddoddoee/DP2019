@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+    <TITLE>free_layout</TITLE>
+    <meta charset="utf-8"/>
+    <style>
+    header{
+        background-color: white;
+    }
+    header>h1{
+        color:mediumpurple;
+        margin: 5px 0px 0px 0px;
+    }
+    header>h1>span:nth-child(2){
+        color:blueviolet;
+    }
+    .float_left{
+        float: left;
+    }
+    .float_right{
+        float: right;
+    }
+    nav>ul>li{
+        color:#9b76bc;
+        font-weight: bold;
+        list-style-type: none;
+        float: left;
+        padding: 0px 15px; /* 상하 좌우 */
+        border-right: solid 1px #aaa; /* 경계선 */
+    }
+    nav>ul>li:nth-child(5){
+        border: none;
+    }
+    .clear{
+        clear: both; /* float을 해제한다 */
+        height: 0px; /* 높이: 0; */
+        overflow: hidden; /* 넘치면: 숨김; */
+    }
+    #main_visual{
+            background-image: url("images/free_tt_back.jpg");
+            background-size: auto 100%; /* 가로 세로 100%는 최대치 */
+            background-size: cover; /* 표지처럼 */
+            background-repeat: no-repeat; /* 반복 방식 */
+            background-position: 50% 50%; /*가로 세로 왼쪽 상단 기준으로 이동한 위치 */
+            color: white;
+            text-align: center;
+            padding: 280px 0px; /* 상하 좌우 */
+            margin: 20px 0px 0px 0px;
+            }
+    #main_visual>h2{
+        font-size: 50px;
+        letter-spacing: 5px; /* 글자 사이 간격 */
+        background-color: #9b76bc;
+        color: white;
+        display: block; /* 표시방식: 블록형 */
+        display: inline-block; /* 표시방식: 인라인-블록(절충식) */
+
+        padding: 0px 15px 5px 15px;
+       }
+
+    section{
+        background-color: #9b76bc;
+        color: white;
+        text-align: center;
+        padding: 50px;
+    }
+    #info_p h3{
+        color: white;
+        margin: 0px;
+    }
+    #info_p>p{
+        text-align: center;
+        margin: 20px 100px 20px 100px;
+    }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header>
+            <h1 class="float_left">
+                <span>LOVE</span><span>PURPLE</span>
+            </h1>
+            <nav class="float_right">
+                <ul>
+                    <li>HOME</li>
+                    <li>LAYOUT1</li>
+                    <li>LAYOUT2</li>
+                    <li>LAYOUT3</li>
+                    <li>INDEX</li>
+                    <div class="clear"></div>
+                </ul>
+            </nav>
+            <div class="clear"></div>    
+    </header>
+    <div id="main_visual">
+        <h2>
+            PURPLE'S SPECIAL FEATURE
+        </h2>
+    </div>
+    <section>
+        <div id=info_p>
+            <h3>About Purple</h3>
+            <p> 그동안 보라색은 매력적이지만 오묘한 느낌과 고귀한 느낌,
+                그리고 잘못 사용할 경우 싸구려의 느낌도 줄 수 있어 섣불리
+                도전하지 못하는 색이었습니다. 색의 독특함 덕분에 팝가수 프린스와
+                함께 데이비드 보위, 지미 헨드릭스는 본인들을 나타내는 색으로
+                보라색을 사용하기도 했습니다.
+                화려함과 중후함, 고귀한 영적의 연결과 개인주의를 대표하는 보라색은
+                빠르게 변화하는 동시에 다양성이 존중받는 이 시기에 잘 어울리는 색으로 인정받게 되었습니다. </p>
+        </div>
+        <ul id="about_list">
+                <li>
+                    <img src="images/layout2_icon1.jpg"/>
+                    <dl>
+                        <dt>Title goes here</dt>
+                        <dd>
+                            onsectetur adipisicing elit, sedo eiusmod tempor incidi
+                            et dolorerserss eerhfre mag.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="images/layout2_icon2.jpg"/>
+                    <dl>
+                        <dt>Title goes here</dt>
+                        <dd>
+                            onsectetur adipisicing elit, sedo eiusmod tempor incidi
+                            et dolorerserss eerhfre mag.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="images/layout2_icon3.jpg"/>
+                    <dl>
+                        <dt>Title goes here</dt>
+                        <dd>
+                            onsectetur adipisicing elit, sedo eiusmod tempor incidi
+                            et dolorerserss eerhfre mag.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="images/layout2_icon4.jpg"/>
+                    <dl>
+                        <dt>Title goes here</dt>
+                        <dd>
+                            onsectetur adipisicing elit, sedo eiusmod tempor incidi
+                            et dolorerserss eerhfre mag.
+                        </dd>
+                    </dl>
+                </li>
+    </section>
+        
+    <footer>
+
+    </footer>
+</div>
+</body>
