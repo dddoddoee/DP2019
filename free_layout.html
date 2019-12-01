@@ -3,15 +3,42 @@
     <TITLE>free_layout</TITLE>
     <meta charset="utf-8"/>
     <style>
+    /* :link, :visited, :hover, :active, :focus */
+    a:link{ color:white; } /*기본 모양*/
+    a:visited{ color:white;} /*방문한 적 있음*/
+    a:hover{ color:#bc77da;} /*마우스 올림*/
+    a { text-decoration:none } 
+
+    #position_target{
+        position: static; /* 기본형 */
+        /* 위치: 정적인, 멈춰있는 */
+        /* relative 관계형 */
+        /* absolute 절대적인 */
+        /* fixed 고정된 */
+        position: fixed;
+        text-align: center;
+        right: 0px;
+        bottom: 20px;
+
+        background-color:#5f1281;
+        opacity: 85%;
+        color:white;
+        width: 100px;
+        padding: 0px 15px;
+        }
+    #position_target>h2{
+        margin: 5px;
+    }
     header{
-        background-color: white;
+        background-color: #8421af;
+        padding: 20px 0px;
     }
     header>h1{
-        color:mediumpurple;
-        margin: 5px 0px 0px 0px;
+        color:white;;
+        margin: 0px 0px 0px 20px;
     }
     header>h1>span:nth-child(2){
-        color:blueviolet;
+        color:#bc77da;
     }
     .float_left{
         float: left;
@@ -19,13 +46,16 @@
     .float_right{
         float: right;
     }
+    nav>ul{
+        margin: 0px 20px 0px 0px;
+    }
     nav>ul>li{
-        color:#9b76bc;
         font-weight: bold;
         list-style-type: none;
         float: left;
         padding: 0px 15px; /* 상하 좌우 */
         border-right: solid 1px #aaa; /* 경계선 */
+        margin: 12px 0px 0px 0px;
     }
     nav>ul>li:nth-child(5){
         border: none;
@@ -36,40 +66,158 @@
         overflow: hidden; /* 넘치면: 숨김; */
     }
     #main_visual{
-            background-image: url("images/free_tt_back.jpg");
-            background-size: auto 100%; /* 가로 세로 100%는 최대치 */
-            background-size: cover; /* 표지처럼 */
-            background-repeat: no-repeat; /* 반복 방식 */
-            background-position: 50% 50%; /*가로 세로 왼쪽 상단 기준으로 이동한 위치 */
-            color: white;
-            text-align: center;
-            padding: 280px 0px; /* 상하 좌우 */
-            margin: 20px 0px 0px 0px;
-            }
-    #main_visual>h2{
-        font-size: 50px;
-        letter-spacing: 5px; /* 글자 사이 간격 */
-        background-color: #9b76bc;
+        background-image: url("images/free_tt_back.jpg");
+        background-size: cover; /* 표지처럼 */
+        background-repeat: no-repeat; /* 반복 방식 */
+        background-position: 50% 50%; /*가로 세로 왼쪽 상단 기준으로 이동한 위치 */
         color: white;
-        display: block; /* 표시방식: 블록형 */
+        text-align: center;
+        padding: 300px 0px; /* 상하 좌우 */
+        }
+    #main_visual>h2{
+        font-size: 40px;
+        letter-spacing: 5px; /* 글자 사이 간격 */
+        background-color: #5f1281;
+        color: white;
         display: inline-block; /* 표시방식: 인라인-블록(절충식) */
 
         padding: 0px 15px 5px 15px;
        }
-
-    section{
-        background-color: #9b76bc;
+    body{
+        margin: 0px;
+        background-color: #8421af;
+    }
+    body #info{
         color: white;
         text-align: center;
-        padding: 50px;
+        padding: 50px 50px 25px 50px;
     }
     #info_p h3{
         color: white;
-        margin: 0px;
+        margin: 20px 0px 0px 0px;
     }
     #info_p>p{
         text-align: center;
         margin: 20px 100px 20px 100px;
+    }
+    #about_list{
+        padding: 25px 50px;
+        margin: 0px;
+        width: 100%
+    }
+    #about_list li{
+        float: left;
+        list-style: none;
+        width:calc(25% - (1px /4 * 3) - 25px - 25px);
+        padding: 15px;
+    }
+    #about_list dd{
+        text-align: center;
+        font-size: 13px;
+        margin: 0px;
+    }
+    #about_list h4{
+        margin: 0px 0px 15px 0px;
+    }
+    .long_line{
+        width: 90px;
+        border-bottom: solid 1px gray;
+        margin: 10px 0px /* 상하 좌우 */
+    }
+    .visual img{
+        display: block; /* 블록 */
+    }
+    .visual div{
+        background-color: #5f1281;
+        color: white;
+        font-size: 14px;
+        display: inline-block; /* 표시방식: 인라인-블록(절충식) */
+
+        padding: 2px 5px 5px 5px;
+        /* 상 우 하 좌 (왼쪽부터 시계방향) */
+
+        position: absolute; /* 절대적인 */
+        bottom: 0px;
+        left:0px;
+        /* top left right bottom */
+    }
+    .visual{
+        position: relative; /* 관계형 */
+        /* 자식이 absolute일 때 Relative인 부모는 자식의 기준이 됨 */
+    }
+    #content{
+        width: 100%;
+    }
+    #content>ul{
+        margin:15px 0px 10px 90px;
+    }
+    #content h3{
+        color: white;
+        margin: 0px 0px 20px 0px;
+        text-align: center;
+    }
+    .card{
+        background-color: white;
+        border-left: solid 1px #5f1281;
+        border-top: solid 1px #5f1281;
+        border-right: solid 3px #5f1281;
+        border-bottom: solid 3px #5f1281;
+        width: 200px;
+        height: 385px;
+        
+        list-style: none;
+        float: left;
+        margin: 5px 5px 50px 5px;
+    }
+    .card_info{
+        padding: 14px;
+    }
+    .card_info dl{
+        margin: 0px;
+    }
+    .card_info dt{
+        font-weight: bold;
+    }
+    .card_info dd{
+        margin: 0px;
+        font-size: 9px;
+    }
+    .card_info .date{
+        color: gray;
+    }
+    #content ul{
+        padding: 0px;
+        
+    }
+    #more{
+        background-color: #5f1281;
+        color:white;
+        list-style: none;
+        float: left;
+        width: 204px;
+        height: 389px;
+        border-left: solid 1px #5f1281;
+        border-top: solid 1px #5f1281;
+        border-right: solid 3px #5f1281;
+        border-bottom: solid 3px #5f1281;
+        position: relative;
+    }
+    .more-t{
+        text-align: center;
+        padding: 120px 40px 40px 40px;
+        font-size: 30px;
+        margin: 0px;
+    }
+    footer{
+        background-color:black;
+        padding: 30px 20px 30px 20px;
+        margin: 20px 0px 0px 0px;
+        color:white;
+        font-size: 7px;
+    }
+    footer>div{
+        float:right;
+        margin:5px 0px 0px 0px;
     }
     </style>
 </head>
@@ -81,13 +229,12 @@
             </h1>
             <nav class="float_right">
                 <ul>
-                    <li>HOME</li>
-                    <li>LAYOUT1</li>
-                    <li>LAYOUT2</li>
-                    <li>LAYOUT3</li>
-                    <li>INDEX</li>
-                    <div class="clear"></div>
-                </ul>
+                    <li><a href="free_index.html">INDEX</a></li>
+                    <li><a href="layout1.html">LAYOUT1</a></li>
+                    <li><a href="layout2.html">LAYOUT2</a></li>
+                    <li><a href="layout3.html">LAYOUT3</a></li>
+                    <li><a href="free_layout.html">FREE</a></li>
+                    </ul>
             </nav>
             <div class="clear"></div>    
     </header>
@@ -96,10 +243,12 @@
             PURPLE'S SPECIAL FEATURE
         </h2>
     </div>
-    <section>
+    <section id="info">
         <div id=info_p>
             <h3>About Purple</h3>
-            <p> 그동안 보라색은 매력적이지만 오묘한 느낌과 고귀한 느낌,
+            <p> 레드와 블루가 겹친 색. 우아함, 화려함, 풍부함, 고독 등의 다양한 느낌이 있어
+                품위 있는 고상함과 함께 외로움과 슬픔을 느끼게 하며 예술감, 신앙심을 자아내기도
+                합니다. 그동안 보라색은 매력적이지만 오묘한 느낌과 고귀한 느낌,
                 그리고 잘못 사용할 경우 싸구려의 느낌도 줄 수 있어 섣불리
                 도전하지 못하는 색이었습니다. 색의 독특함 덕분에 팝가수 프린스와
                 함께 데이비드 보위, 지미 헨드릭스는 본인들을 나타내는 색으로
@@ -109,49 +258,206 @@
         </div>
         <ul id="about_list">
                 <li>
-                    <img src="images/layout2_icon1.jpg"/>
+                    <img src="images/colorchip_1.jpg"/>
                     <dl>
-                        <dt>Title goes here</dt>
+                        <dt><h4>COTTON PURPLE</h4></dt>
                         <dd>
-                            onsectetur adipisicing elit, sedo eiusmod tempor incidi
-                            et dolorerserss eerhfre mag.
+                            어린 시절 먹었던 솜사탕 같은 구름같이 포근한 톤의 퍼플 COTTON PURPLE.
+                            부담없이 가벼운 컬러로, 당신의 디자인을 더욱 부드럽고 산뜻하게 합니다. 
                         </dd>
                     </dl>
                 </li>
                 <li>
-                    <img src="images/layout2_icon2.jpg"/>
+                    <img src="images/colorchip_2.jpg"/>
                     <dl>
-                        <dt>Title goes here</dt>
+                        <dt><h4>CANDY PURPLE</h4></dt>
                         <dd>
-                            onsectetur adipisicing elit, sedo eiusmod tempor incidi
-                            et dolorerserss eerhfre mag.
+                            COTTON PURPLE보단 무게감이 있는 CANDY PURPLE. 당신의 디자인을 좀 더
+                            특별해보이도록 돕습니다. 오묘함과 함께 레트로한 느낌이 드는 컬러.
                         </dd>
                     </dl>
                 </li>
                 <li>
-                    <img src="images/layout2_icon3.jpg"/>
+                    <img src="images/colorchip_3.jpg"/>
                     <dl>
-                        <dt>Title goes here</dt>
+                        <dt><h4>LOVE PURPLE</h4></dt>
                         <dd>
-                            onsectetur adipisicing elit, sedo eiusmod tempor incidi
-                            et dolorerserss eerhfre mag.
+                            사랑스러운 느낌의 PURPLE. 다양한 곳에서 사랑받는 가장 대중적인 PURPLE입니다.
+                            당신의 작업물이 시선을 잡아 끌도록 만들어주는 가장 매력적인 톤의 PURPLE.
                         </dd>
                     </dl>
                 </li>
                 <li>
-                    <img src="images/layout2_icon4.jpg"/>
+                    <img src="images/colorchip_4.jpg"/>
                     <dl>
-                        <dt>Title goes here</dt>
+                        <dt><h4>DEEP PURPLE</h4></dt>
                         <dd>
-                            onsectetur adipisicing elit, sedo eiusmod tempor incidi
-                            et dolorerserss eerhfre mag.
+                            무겁고 향기로운 느낌이 드는 DEEP PURPLE. 매혹적인 느낌의 DEEP PURPLE은
+                            당신의 작업물에 고귀한 느낌을 더해줄 고급스러운 PURPLE입니다.
                         </dd>
-                    </dl>
+                    </dl> 
                 </li>
+                <div class="clear"></div>  
     </section>
+    <section id="position_target">
+        <h2><a href="free_index.html">BACK</a></h2>
+    </section>
+    <div id="content">
+        <h3>PURPLE'S FEATURE</h3>
+        <ul>
+            <li class="card">
+                <div class="visual">
+                    <img src="images/f_card-1.jpg" />
+                    <div>COTTON PURPLE</div>
+                </div>
+                <div class="card_info">
+                    <dl>
+                        <dt>PURPLE'S FEATURE 1</dt>
+                        <dd>
+                            <div class="date">20th JULY 1994</div>
+                            <div class="long_line"></div>
+                            <p>
+                                COTTON PURPLE을 이용한 몽환적이고 판타지적으로 보이는 향수병 디자인
+                            </p>
+                           <div class="long_line"></div>
+                        </dd>
+                    </dl> 
+                </div>
+            </li>
+            <li class="card">
+                <div class="visual">
+                    <img src="images/f_card-2.jpg" />
+                    <div>CANDY PURPLE</div>
+                </div>
+                <div class="card_info">
+                    <dl>
+                        <dt>PURPLE'S FEATURE 2</dt>
+                        <dd>
+                            <div class="date">20th JULY 1994</div>
+                            <div class="long_line"></div>
+                            <p>
+                                CANDY PURPLE을 이용한 오묘하고 스페셜해 보이는 의상 디자인
+                            </p>
+                            <div class="long_line"></div>
+                         </dd>
+                    </dl> 
+                </div>
+            </li>
+            <li class="card">
+                <div class="visual">
+                    <img src="images/f_card-3.jpg" />
+                    <div>COTTON PURPLE</div>
+                </div>
+                <div class="card_info">
+                    <dl>
+                        <dt>PURPLE'S FEATURE 3</dt>
+                        <dd>
+                            <div class="date">20th JULY 1994</div>
+                            <div class="long_line"></div>
+                            <p>
+                                COTTON PURPLE을 이용한 아기자기한 느낌이 나는 디자인
+                            </p>
+                        <div class="long_line"></div>
+                        </dd>
+                    </dl> 
+                </div>
+            </li>
+            <li class="card">
+                <div class="visual">
+                    <img src="images/f_card-4.jpg" />
+                    <div>DEEP PURPLE</div>
+                </div>
+                <div class="card_info">
+                    <dl>
+                    <dt>PURPLE'S FEATURE 4</dt>
+                                <dd>
+                                    <div class="date">20th JULY 1994</div>
+                                     <div class="long_line"></div>
+                                    <p>
+                                        DEEP PURPLE을 이용한 몽환적이고 고고한 매력의 향수병 디자인
+                                    </p>
+                                   <div class="long_line"></div>
+                                </dd>
+                            </dl> 
+                        </div>
+            </li>
+            <li class="card">
+                <div class="visual">
+                    <img src="images/f_card-5.jpg" />
+                    <div>LOVE PURPLE</div>
+                </div>
+                <div class="card_info">
+                    <dl>
+                        <dt>PURPLE'S FEATURE 5</dt>
+                        <dd>
+                            <div class="date">20th JULY 1994</div>
+                            <div class="long_line"></div>
+                            <p>
+                                LOVE PURPLE을 이용한 오묘하고 레트로스러운 매력이 있는 그래픽디자인
+                            </p>
+                            <div class="long_line"></div>
+                        </dd>
+                    </dl> 
+                </div>
+            </li>
+            <li class="card">
+                <div class="visual">
+                    <img src="images/f_card-6.jpg" />
+                    <div>CANDY PURPLE</div>
+                </div>
+                <div class="card_info">
+                    <dl>
+                        <dt>PURPLE'S FEATURE 6</dt>
+                        <dd>
+                            <div class="date">20th JULY 1994</div>
+                            <div class="long_line"></div>
+                            <p>
+                                우리에게 동화같은 영감을 주는CANDY PURPLE 컬러의 꽃밭
+                            </p>
+                            <div class="long_line"></div>
+                        </dd>
+                    </dl> 
+                </div>
+            </li>
+            <li class="card">
+                <div class="visual">
+                    <img src="images/f_card-7.jpg" />
+                    <diV>LOVE PURPLE</div>
+                </div>
+                <div class="card_info">
+                    <dl>
+                        <dt>PURPLE'S FEATURE 7</dt>
+                        <dd>
+                            <div class="date">20th JULY 1994</div>
+                            <div class="long_line"></div>
+                            <p>
+                                LOVE PURPLE을 이용하여 신비로운 느낌을 더한 달의 변화 차트
+                            </p>
+                            <div class="long_line"></div>
+                        </dd>
+                    </dl> 
+                </div>
+            </li>             
+            <li id="more">
+                <div class="more-t">
+                <p>SEE MORE</p>
+                </div>
+            </li>                       
+        </ul>
+        <div class="clear"></div>
+    </div>
         
     <footer>
-
+            <div class="short_line"></div>
+            <img src="images/layout3_icon1.png">
+            <img src="images/layout3_icon2.png">
+            <img src="images/layout3_icon3.png">
+            <img src="images/layout3_icon4.png">
+            <div class="short_line"></div>
+            <div>
+                    Copyright 2019 Communication Design 2019222011 Choi So Jeong.
+                    명지전문대학 커뮤니케이션 디자인과 2019222011 최소정
+            </div>
     </footer>
 </div>
 </body>
