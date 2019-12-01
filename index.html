@@ -1,22 +1,158 @@
-Hello world 2019222011 최소정
 <!DOCTYPE HTML>
 <html>
      <head>
-            <title>HTML Design</title>
+            <title>FREE INDEX</title>
             <meta charset="utf-8" />
             <!-- utf-8, euc-kr -->
             <meta name="author" content="최소정" />
+
+     <style>
+    /* :link, :visited, :hover, :active, :focus */
+    a:link{ color:white; } /*기본 모양*/
+    a:visited{ color:white;} /*방문한 적 있음*/
+    a:hover{ color:#bc77da;} /*마우스 올림*/
+    a { text-decoration:none } 
+
+    #wrap{
+                min-width: 1000px;
+                max-width: 1920px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            
+    header{
+        background-color: #8421af;
+        padding: 20px 0px;
+    }
+    header>h1{
+        color:white;;
+        margin: 0px 0px 0px 20px;
+    }
+    header>h1>span:nth-child(2){
+        color:#bc77da;
+    }
+    .float_left{
+        float: left;
+    }
+    .float_right{
+        float: right;
+    }
+    nav>ul{
+        margin: 0px 20px 0px 0px;
+    }
+    nav>ul>li{
+        font-weight: bold;
+        list-style-type: none;
+        float: left;
+        padding: 0px 15px; /* 상하 좌우 */
+        border-right: solid 1px #aaa; /* 경계선 */
+        margin: 12px 0px 0px 0px;
+    }
+    nav>ul>li:nth-child(5){
+        border: none;
+    }
+    .clear{
+        clear: both; /* float을 해제한다 */
+        height: 0px; /* 높이: 0; */
+        overflow: hidden; /* 넘치면: 숨김; */
+    }
+
+    #main_visual{
+        background-image: url("images/free_tt_back.jpg");
+        background-size: cover; /* 표지처럼 */
+        background-repeat: no-repeat; /* 반복 방식 */
+        background-position: 50% 50%; /*가로 세로 왼쪽 상단 기준으로 이동한 위치 */
+        color: white;
+        text-align: center;
+        padding: 300px 0px; /* 상하 좌우 */
+        }
+    #main_visual>h2{
+        font-size: 40px;
+        letter-spacing: 5px; /* 글자 사이 간격 */
+        background-color: #5f1281;
+        color: white;
+        display: inline-block; /* 표시방식: 인라인-블록(절충식) */
+
+        padding: 0px 15px 5px 15px;
+       }
+
+    body{
+        margin: 0px;
+        background-color: #8421af;
+    }
+    body section{
+        color: white;
+        text-align: center;
+        padding: 50px 50px 25px 50px;
+    }
+    section h3{
+        color: white;
+        margin: 20px 0px 0px 0px;
+    }
+    section>p{
+        text-align: center;
+        margin: 20px 100px 20px 100px;
+    }
+    footer{
+        background-color:black;
+        padding: 30px 0px 50px 0px;
+        margin: 20px 0px 0px 0px;
+        color:white;
+        font-size: 9px;
+        width: 100%;
+    }
+    #foot_img{
+        float:left;
+        margin: 0px 0px 0px 30px;
+    }
+    footer>div{
+        float:right;
+        margin:5px 30px 0px 0px;
+    }
+    </style>       
      </head>
      <body>
-        <a href="training_hd.html">HTML연습</a>
-        <a href="html_part1_hd.html">자유주제</a>
-        <a href="html5.html">html5연습</a>
-        <a href="form.html">회원가입</a>
-        <a href="css.html">CSS</a>
-        <a href="css_part1.html">CSS_part1</a>
-        <a href="layout1.html">레이아웃1</a>
-        <a href="layout2.html">레이아웃2</a>
-        <a href="layout3.html">레이아웃3</a>
-        <a href="free_index.html">프리레이아웃(인덱스)</a>       
-     </body>
+    <div id=wrap>
+            <header>
+                    <h1 class="float_left">
+                        <span>LOVE</span><span>PURPLE</span>
+                    </h1>
+                    <nav class="float_right">
+                            <ul>
+                                <li><a href="index.html">INDEX</a></li>
+                                <li><a href="layout1.html">LAYOUT1</a></li>
+                                <li><a href="layout2.html">LAYOUT2</a></li>
+                                <li><a href="layout3.html">LAYOUT3</a></li>
+                                <li><a href="free_layout.html">FREE</a></li>
+                            </ul>
+                    </nav>   
+                    <div class="clear"></div>   
+            </header>
+            <div id="main_visual">
+                    <h2>
+                        WELCOME TO MY WORLD
+                    </h2>
+                      
+            </div> 
+            <section>
+                    <div id=info_p>
+                        <h3>About This Page</h3>
+                        <p>제가 제일 좋아하는 색깔인 보라색에 대해 분류하고 소개하는 페이지 입니다.</p>
+                    </div>
+            </section>
+        <footer>
+            <div id="foot_img">
+                <img src="images/layout3_icon1.png">
+                <img src="images/layout3_icon2.png">
+                <img src="images/layout3_icon3.png">
+                <img src="images/layout3_icon4.png">
+            </div>
+            <div>
+                   Copyright 2019 Communication Design 2019222011 Choi So Jeong.
+                    명지전문대학 커뮤니케이션 디자인과 2019222011 최소정
+            </div>
+        </footer>
+    </div>
+    </body>
+     
 </html>
